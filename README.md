@@ -69,5 +69,16 @@ You will need two separate terminals to run both the backend and frontend server
 
 3.  **Run the Benchmark:**
     -   Click the "Start Full Benchmark" button to execute all tests and populate the charts.
-    <img width="287" height="87" alt="image" src="https://github.com/user-attachments/assets/f9054422-f5c4-4ef1-bb9d-44f0d91ab5a1" />
+    -    <img width="287" height="87" alt="image" src="https://github.com/user-attachments/assets/f9054422-f5c4-4ef1-bb9d-44f0d91ab5a1" />
 
+## Future Implementations & Improvements
+
+This project provides a strong foundation for further research. The following are logical next steps to deepen the comparison:
+
+-   [ ] **Implement True GraphQL Subscriptions:** Refactor the GraphQL server to use WebSockets (`graphql-ws`). This would enable a true, apples-to-apples comparison of gRPC's streaming performance against GraphQL's real-time subscription model.
+
+-   [ ] **Vary Payload Sizes:** Introduce tests that compare performance when dealing with very small versus very large data objects to see how each protocol handles different serialization loads.
+
+-   [ ] **Simulate Network Conditions:** Integrate a tool to simulate real-world network conditions, such as high latency or packet loss, to test the resilience and performance of each protocol.
+
+-   [ ] **Introduce More Complex Queries:** Add a test scenario where a GraphQL query fetches a complex, nested data graph, and compare its performance against the multiple, chained gRPC calls required to fetch the same data.
