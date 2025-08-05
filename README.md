@@ -69,3 +69,5 @@ You will need two separate terminals to run both the backend and frontend server
 
 3.  **Run the Benchmark:**
     -   Click the "Start Full Benchmark" button to execute all tests and populate the charts.
+    <img width="287" height="87" alt="image" src="https://github.com/user-attachments/assets/f9054422-f5c4-4ef1-bb9d-44f0d91ab5a1" />
+
