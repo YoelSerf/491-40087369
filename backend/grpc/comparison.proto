@@ -1,0 +1,30 @@
+// backend/grpc/comparison.proto
+syntax = "proto3";
+
+package comparison;
+
+service ComparisonService {
+  rpc GetResource(ResourceRequest) returns (Resource);
+  rpc CreateResource(CreateResourceRequest) returns (Resource);
+  rpc StreamResources(StreamRequest) returns (stream Resource);
+}
+
+message Resource {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message ResourceRequest {
+  int32 id = 1;
+}
+
+message CreateResourceRequest {
+  string name = 1;
+  string description = 2;
+}
+
+message StreamRequest {
+  int32 count = 1;
+  //int32 delayMs = 2; // Optional: to simulate real-world streaming delays
+}
